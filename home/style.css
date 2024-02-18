@@ -191,8 +191,8 @@ h2{
     justify-content: end; 
     gap: 6%;
 }
-.warningIcon{
-    height: 100%;
+.tarefaTopRight img{
+    height: 80%;
     max-height: 50px;
 }
 #mensagemInfoWarning {

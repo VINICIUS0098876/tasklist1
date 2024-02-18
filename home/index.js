@@ -170,10 +170,7 @@ function criarTarefa(infoTarefas) {
         if(infoTarefas.categoria){
             tarefaTopRight.appendChild(tarefaCategoria)
         }
-        tarefaTop.style.height='100%'
-        tarefa.style.height='13%'
         tarefaTop.style.borderRadius = "26px";
-
     } else {
         tarefa.appendChild(tarefaBottom)
         if(infoTarefas.categoria){

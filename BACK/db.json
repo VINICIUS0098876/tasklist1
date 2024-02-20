@@ -82,12 +82,12 @@
       "idUsuario": 5
     },
     {
-      "id": 7,
       "titulo": "Praticar exercícios",
       "descricao": "30 abdominais, 30 flexões, 1 hora de caminhada",
-      "data": "2024-02-30",
+      "data": "2024-02-29",
       "categoria": 4,
-      "idUsuario": 5
+      "idUsuario": 5,
+      "id": 7
     },
     {
       "id": 8,

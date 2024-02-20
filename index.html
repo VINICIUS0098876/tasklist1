@@ -24,11 +24,11 @@
 
 <body>
     <div class="adicionarTarefaPage" style = 'visibility: hidden;'id="adicionarTarefaPage">
-        <img src="./img/xbutton.png" class="closeButton" id="botaoFecharPainel">
+        <img src="./img/xbutton.png" class="closeButton" id="botaoFecharPainelNovaTarefa">
         <input type="text" placeholder="Título da tarefa" id=tituloTarefaNova>
-        <input type="text" placeholder="Descrição da tarefa" id=descricaoTarefaNova>
-        <input type="date" id="dataTarefa" id="dataTarefaNova">
-        <fieldset id=categoria>
+        <textarea placeholder="Descrição da tarefa" id=descricaoTarefaNova class="descricaoTarefa"></textarea>
+        <input type="date" id="dataTarefaNova">
+        <fieldset id=categoriaTarefaNova>
             <p>Selecione uma categoria:</p>
             <div>
                 <div>
@@ -50,6 +50,34 @@
             </div>
         </fieldset>
         <button onclick="cadastroTarefa()">Adicionar</button>
+    </div>
+    <div class="editarTarefaPage" style = 'visibility: hidden;'id="editarTarefaPage">
+        <img src="./img/xbutton.png" class="closeButton" id="botaoFecharPainelEditarTarefa">
+        <input type="text" placeholder="Título da tarefa" id=tituloTarefaEditada>
+        <textarea placeholder="Descrição da tarefa" id=descricaoTarefaEditada class="descricaoTarefa"></textarea>
+        <input type="date" id="dataTarefaEditada">
+        <fieldset id=categoriaTarefaEditada>
+            <p>Selecione uma categoria:</p>
+            <div>
+                <div>
+                    <input type="radio" id="pessoalOption" value=1 name="option">
+                    <label for="pessoalOption">Pessoal</label>
+                </div>
+                <div>
+                    <input type="radio" id="trabalhoOption" value=2 name="option">
+                    <label for="trabalhoOption">Trabalho</label>
+                </div>
+                <div>
+                    <input type="radio" id="casaOption" value=3 name="option">
+                    <label for="casaOption">Casa</label>
+                </div>
+                <div>
+                    <input type="radio" id="saudeOption" value=4 name="option">
+                    <label for="saudeOption">Saúde</label>
+                </div>
+            </div>
+        </fieldset>
+        <button id="finalizarEdicao">Editar</button>
     </div>
     <header>
         <h1>task list</h1>

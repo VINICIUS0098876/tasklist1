@@ -35,6 +35,24 @@
       "email": "welbert@",
       "senha": "welbert",
       "id": 6
+    },
+    {
+      "nome": "Vitão",
+      "email": "vitor@email",
+      "senha": "vitor",
+      "id": 7
+    },
+    {
+      "nome": "cu de puta",
+      "email": "porra@69",
+      "senha": "maria",
+      "id": 8
+    },
+    {
+      "nome": "vinivini",
+      "email": "vinivini@gmail",
+      "senha": "vini",
+      "id": 9
     }
   ],
   "tarefas": [
@@ -74,12 +92,12 @@
       "idUsuario": 3
     },
     {
-      "id": 6,
       "titulo": "Regar as plantas",
       "descricao": "As plantas gostam de água entre 13:00-15:00, então faça as feliz. Atenção: Não regar as plantas em dias de chuva!!",
-      "data": "2024-02-30",
-      "categoria": 3,
-      "idUsuario": 5
+      "data": "2024-02-29",
+      "categoria": "3",
+      "idUsuario": "5",
+      "id": 6
     },
     {
       "titulo": "Praticar exercícios",
@@ -104,6 +122,30 @@
       "data": "2024-02-15",
       "categoria": 1,
       "idUsuario": 5
+    },
+    {
+      "titulo": "Corrigir o trabalho",
+      "descricao": "Corrigir a tarefa dos alunos",
+      "data": "2024-02-29",
+      "categoria": "2",
+      "idUsuario": "7",
+      "id": 10
+    },
+    {
+      "titulo": "Limpar a casa",
+      "descricao": "Passar o pano nos móveis!!!!!",
+      "data": "2024-02-08",
+      "categoria": "3",
+      "idUsuario": "7",
+      "id": 11
+    },
+    {
+      "titulo": "azcassa",
+      "descricao": "",
+      "data": "2024-02-02",
+      "categoria": "1",
+      "idUsuario": "9",
+      "id": 13
     }
   ]
 }

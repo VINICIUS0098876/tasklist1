@@ -18,31 +18,26 @@ const listaTarefas = document.getElementById('tarefas')
 
 
 
-let painelFiltroOn = false
-
 filtroButton.addEventListener('click',filtrar) 
 function filtrar(){
     filtro++
     if(filtro==5){
         filtro=0
     }
-    // console.log(filtro)
-    while (listaTarefas.firstChild) {
-        let child = listaTarefas.firstChild
-        listaTarefas.removeChild(child);
-    }
-    criarTarefas(filtro)
+    atualizarPagina()
+    console.log(filtro)
 }
 
-// filtroButton.addEventListener('click', () => {
-//     if(!painelFiltroOn){
-//         painelFiltro.style.display = 'block';
-//         painelFiltroOn = true
-//     } else {
-//         painelFiltro.style.display = 'none';
-//         painelFiltroOn = false
-//     }
-// });
+function excluirListaTarefas(){
+    while (listaTarefas.firstChild) {
+        listaTarefas.removeChild(listaTarefas.firstChild);
+    }
+}
+atualizarPagina()
+function atualizarPagina(){
+    excluirListaTarefas()
+    criarTarefas(filtro)
+}
 async function validarTarefas() {
     const responseApi = await fetch('http://localhost:5080/tarefas')
     const listTasks = await responseApi.json()
@@ -75,7 +70,7 @@ async function cadastroTarefa() {
 
 
     if (titulo == "" || ano > 9999) {
-        alert("Preencha os campos devidamente!")
+        //
     } else {
         try {
             const novaTarefa = {
@@ -166,18 +161,19 @@ async function deletarTarefa(id) {
             method: 'DELETE',
         });
         console.log('Tarefa excluída com sucesso!');
-        window.location.reload()
+        atualizarPagina()
     } catch (error) {
         console.error('Ocorreu um erro ao excluir a tarefa:', error);
     }
 }
-criarTarefas()
 async function criarTarefas(filtro) {
     const infoTarefas = await validarTarefas()
+    console.log(infoTarefas)
     if(filtro>0){
         for (let cont = 0; cont < infoTarefas.length; cont++) {
-            if(infoTarefas[cont].categoria===filtro)
-            criarTarefa(infoTarefas[cont])
+            if(infoTarefas[cont].categoria==filtro){
+                criarTarefa(infoTarefas[cont])
+            }
         }
     } else {
         for (let cont = 0; cont < infoTarefas.length; cont++) {
@@ -192,7 +188,7 @@ function logout() {
     window.location.reload()
 }
 
-closePanelNovaTarefa.addEventListener('click', fecharPainelNovaTarefa)
+closePanelNovaTarefa.addEventListener('click',   fecharPainelNovaTarefa)
 function fecharPainelNovaTarefa() {
     tarefaPage.style.visibility = "hidden"
 }
